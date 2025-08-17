@@ -1,4 +1,4 @@
-package main
+package caser
 
 type delimType int
 
@@ -9,17 +9,17 @@ const (
 	none
 )
 
-func detectCase(s string) (caser validCase) {
+func DetectCase(s string) (caser ValidCase) {
 	delim := detectDelim(s)
 	switch delim {
 	case space:
-		caser = lower
+		caser = Lower
 	case underscore:
-		caser = snake
+		caser = Snake
 	case dash:
-		caser = kebab
+		caser = Kebab
 	case none:
-		caser = camel
+		caser = Camel
 	}
 	return
 }
