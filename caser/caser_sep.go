@@ -88,6 +88,6 @@ func sepCamel(s string) []string {
 			j = i
 		}
 	}
-	outArr = append(outArr, s[j:len(s)-1])
+	outArr = append(outArr, s[j:])
 	return outArr
 }
